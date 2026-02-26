@@ -94,6 +94,72 @@
         b {
             color: #2c3e50;
         }
+
+        /* Interactive Legends */
+        .image-wrapper {
+            position: relative;
+            display: inline-block;
+            max-width: 100%;
+        }
+
+        .legend-dot {
+            position: absolute;
+            width: 28px;
+            height: 28px;
+            background: #e74c3c;
+            color: white;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 28px;
+            font-weight: bold;
+            cursor: pointer;
+            box-shadow: 0 0 0 4px rgba(231, 76, 60, 0.4);
+            transition: all 0.2s ease;
+            z-index: 10;
+        }
+
+        .legend-dot:hover {
+            transform: scale(1.2);
+            background: #c0392b;
+            z-index: 20;
+        }
+
+        .legend-tooltip {
+            visibility: hidden;
+            width: max-content;
+            max-width: 250px;
+            background-color: rgba(44, 62, 80, 0.95);
+            color: #fff;
+            text-align: center;
+            border-radius: 6px;
+            padding: 8px 12px;
+            position: absolute;
+            bottom: 130%;
+            left: 50%;
+            transform: translateX(-50%);
+            opacity: 0;
+            transition: opacity 0.3s;
+            font-size: 14px;
+            font-weight: normal;
+            pointer-events: none;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+
+        .legend-tooltip::after {
+            content: "";
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            margin-left: -6px;
+            border-width: 6px;
+            border-style: solid;
+            border-color: rgba(44, 62, 80, 0.95) transparent transparent transparent;
+        }
+
+        .legend-dot:hover .legend-tooltip {
+            visibility: visible;
+            opacity: 1;
+        }
     </style>
 </head>
 
@@ -103,8 +169,22 @@
         <h1>Massicot IDEAL 4850-95 EP</h1>
 
         <div class="img-container">
-            <img src="1216.jpg" alt="Vue d'ensemble du massicot">
-            <p><i>Vue générale de la machine</i></p>
+            <div class="image-wrapper">
+                <img src="1216.jpg" alt="Vue d'ensemble du massicot">
+                <div class="legend-dot" style="bottom: 12%; right: 29%;"><span class="legend-tooltip">Clé de contact
+                        (Démarrage)</span>1</div>
+                <div class="legend-dot" style="bottom: 15%; left: 24%;"><span class="legend-tooltip">Interrupteur ON
+                        (Rouge)</span>2</div>
+                <div class="legend-dot" style="bottom: 15%; left: 9%;"><span class="legend-tooltip">Bouton de coupe
+                        (Gauche)</span>3</div>
+                <div class="legend-dot" style="bottom: 15%; right: 18%;"><span class="legend-tooltip">Bouton de coupe
+                        (Droit)</span>4</div>
+                <div class="legend-dot" style="bottom: 10%; left: 47%;"><span class="legend-tooltip">Molette
+                        d'ajustement fin</span>5</div>
+                <div class="legend-dot" style="top: 25%; right: 10%;"><span class="legend-tooltip">Pavé numérique de
+                        contrôle</span>6</div>
+            </div>
+            <p><i>Vue générale de la machine (Survolez les points rouges)</i></p>
         </div>
 
         <h2>1. Mise en route </h2>
@@ -122,8 +202,20 @@
         <h2>2. Utilisation Manuelle Rapide</h2>
         <div class="step">
             <div class="img-container">
-                <img src="1217.jpg" alt="Focus sur le clavier">
-                <p><i>La coupe unique</i></p>
+                <div class="image-wrapper">
+                    <img src="1217.jpg" alt="Focus sur le clavier">
+                    <div class="legend-dot" style="bottom: 10%; right: 12%;"><span class="legend-tooltip">Bouton START
+                            (Vert) - Lance la butée</span>1</div>
+                    <div class="legend-dot" style="top: 48%; left: 24%;"><span class="legend-tooltip">Mode Programme
+                            (P)</span>2</div>
+                    <div class="legend-dot" style="top: 61%; left: 24%;"><span class="legend-tooltip">Mémoriser l'étape
+                            (Feuille et crayon)</span>3</div>
+                    <div class="legend-dot" style="top: 34%; left: 24%;"><span class="legend-tooltip">Effacer
+                            (CP)</span>4</div>
+                    <div class="legend-dot" style="bottom: 30%; right: 12%;"><span class="legend-tooltip">Bouton STOP
+                            (Rouge) - Urgence</span>5</div>
+                </div>
+                <p><i>La coupe unique (Survolez les points rouges)</i></p>
             </div>
             <ul>
                 <li> Ouvre la sécurité en plexiglasss</li>
