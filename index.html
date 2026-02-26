@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Tuto Massicot IDEAL 4850-95 EP</title>
+    <title>Tutoriel Massicot IDEAL 4850-95 EP</title>
     <style>
         body {
             font-family: 'Arial', sans-serif;
@@ -11,13 +11,13 @@
             color: #222;
             max-width: 900px;
             margin: 0 auto;
-            padding: 20px;
+            padding: 30px;
             background-color: #f4f4f4;
         }
 
         .container {
             background: white;
-            padding: 30px;
+            padding: 40px;
             border-radius: 8px;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
         }
@@ -27,81 +27,39 @@
             text-align: center;
             text-transform: uppercase;
             border-bottom: 4px solid #e74c3c;
-            padding-bottom: 10px;
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+            font-size: 24pt;
         }
 
         h2 {
             color: #2c3e50;
-            border-left: 5px solid #3498db;
-            padding-left: 10px;
-            margin-top: 30px;
+            border-left: 6px solid #3498db;
+            padding-left: 15px;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            font-size: 18pt;
         }
 
         .img-container {
             text-align: center;
-            margin: 20px 0;
+            margin: 25px 0;
         }
 
-        .img-container img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 5px;
-            border: 1px solid #ccc;
-        }
-
-        .step {
-            margin-bottom: 20px;
-            padding: 15px;
-            border-left: 3px solid #eee;
-        }
-
-        .alert {
-            background-color: #fff3cd;
-            border: 1px solid #ffeeba;
-            padding: 15px;
-            border-radius: 5px;
-            font-weight: bold;
-            color: #856404;
-            margin: 20px 0;
-        }
-
-        .btn {
-            display: inline-block;
-            padding: 4px 10px;
-            border-radius: 4px;
-            font-weight: bold;
-            color: white;
-            text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
-        }
-
-        .btn-green {
-            background-color: #27ae60;
-        }
-
-        .btn-red {
-            background-color: #c0392b;
-        }
-
-        .btn-grey {
-            background-color: #7f8c8d;
-        }
-
-        .icon-pencil {
-            font-style: italic;
-            text-decoration: underline;
-        }
-
-        b {
-            color: #2c3e50;
-        }
-
-        /* Interactive Legends */
         .image-wrapper {
             position: relative;
             display: inline-block;
             max-width: 100%;
         }
 
+        .image-wrapper img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        /* Interactive Dots */
         .legend-dot {
             position: absolute;
             width: 28px;
@@ -161,9 +119,89 @@
             opacity: 1;
         }
 
-        .highlight {
+        /* Static Legend List (PDF Style) */
+        .legend-list {
+            text-align: left;
+            margin: 15px auto;
+            display: table;
+            font-size: 11pt;
+            background: #fdfdfd;
+            padding: 15px;
+            border: 1px solid #eee;
+            border-radius: 5px;
+        }
+
+        .legend-item {
+            margin-bottom: 6px;
+        }
+
+        .legend-num {
+            display: inline-block;
+            width: 22px;
+            height: 22px;
+            background: #e74c3c;
+            color: white;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 22px;
+            font-size: 10px;
+            margin-right: 10px;
+            font-weight: bold;
+        }
+
+        .step {
+            margin-bottom: 25px;
+            padding: 15px 20px;
+            border-left: 4px solid #eee;
+            background: #fafafa;
+            border-radius: 0 5px 5px 0;
+        }
+
+        .alert {
+            background-color: #fdf2ce;
+            border: 1px solid #ffeeba;
+            padding: 20px;
+            border-radius: 5px;
+            font-weight: bold;
+            color: #856404;
+            margin: 25px 0;
+            font-size: 12pt;
+        }
+
+        ul,
+        ol {
+            margin: 10px 0;
+            padding-left: 25px;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        /* Bold highlights asked by user */
+        .instruction-gras {
             font-weight: 800;
+            color: #000;
+        }
+
+        b {
             color: #c0392b;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-weight: bold;
+            color: white;
+        }
+
+        .btn-green {
+            background-color: #27ae60;
+        }
+
+        .btn-grey {
+            background-color: #7f8c8d;
         }
     </style>
 </head>
@@ -193,39 +231,54 @@
                 <div class="legend-dot" style="top: 25%; right: 10%;"><span class="legend-tooltip">Pavé numérique de
                         contrôle</span>8</div>
             </div>
-            <p><i>Vue générale de la machine (Survolez les points rouges)</i></p>
+            <div class="legend-list">
+                <div class="legend-item"><span class="legend-num">1</span> <b>Clé de contact</b></div>
+                <div class="legend-item"><span class="legend-num">2</span> <b>Interrupteur ON (Rouge)</b></div>
+                <div class="legend-item"><span class="legend-num">3</span> <b>Bouton de sécurité</b></div>
+                <div class="legend-item"><span class="legend-num">4</span> <b>Bouton pour lever la pression</b></div>
+                <div class="legend-item"><span class="legend-num">5</span> <b>Bouton de pression</b></div>
+                <div class="legend-item"><span class="legend-num">6</span> <b>Bouton de coupe</b></div>
+                <div class="legend-item"><span class="legend-num">7</span> <b>Molette d'ajustement fin</b></div>
+                <div class="legend-item"><span class="legend-num">8</span> <b>Pavé numérique</b></div>
+            </div>
         </div>
 
-        <h2>1. Mise en route </h2>
+        <div class="alert">
+            ⚠️ <b>SÉCURITÉ :</b> Pour couper, utiliser impérativement <b class="instruction-gras">les deux mains</b> :
+            appuyer simultanément sur le <b class="instruction-gras">bouton de sécurité</b> et le <b
+                class="instruction-gras">bouton de coupe</b>.
+        </div>
+
+        <h2>1. Mise en route</h2>
         <div class="step">
-            <p>µ Démarrage :</p>
             <ol>
-                <li>Tourne la <b>clé de contact</b> en bas à droite.</li>
-                <li>Bascule l'<b>interrupteur rouge</b> (en bas à gauche) sur <b>ON</b>.</li>
-                <li><b>IMPORTANT :</b> Une fois que l'écran s'allume, appuie sur le <span class="btn btn-green">START
-                        (Verte)</span> du pavé numérique pour initialiser la butée arrière. </li>
-                <li> Ouvre la sécurité en plexiglasss</li>
+                <li>Tourne la <b class="instruction-gras">clé de contact</b> en bas à droite.</li>
+                <li>Bascule l'<b class="instruction-gras">interrupteur rouge</b> (en bas à gauche) sur <b
+                        class="instruction-gras">ON</b>.</li>
+                <li><b class="instruction-gras">IMPORTANT :</b> Une fois l'écran allumé, appuie sur le bouton <span
+                        class="btn btn-green">START (Vert)</span> du pavé numérique pour initialiser la butée arrière.
+                </li>
+                <li>Ouvre la <b>sécurité en plexiglass</b>.</li>
             </ol>
         </div>
 
-        <h2>2. Utilisation Manuelle Rapide</h2>
+        <h2>2. Utilisation Manuelle (Coupe unique)</h2>
         <div class="step">
-
             <ul>
-                <li> Ouvre la sécurité en plexiglasss</li>
-                <li> Dépose ton papier sur le plateau contre la butée arrière</li>
-                <li> Ferme la sécurité en plexiglass</li>
-                <li><b>Règle la taille :</b> Tape directement la dimension souhaitée sur le pavé numérique (ex: 21.00
-                    pour du A4).</li>
-                <li><b>Valide :</b> Appuie sur la touche <span class="btn btn-green">START (Verte)</span>. La butée
-                    arrière va se déplacer toute seule à la bonne mesure.</li>
-                <li><b>Ajustement fin :</b> Si besoin, utilise la grosse molette noire sous le plateau pour peaufiner au
-                    millimètre près.</li>
-                <li> Pour descendre la presse, appuie sur le bouton pour de sécurité et le bouton de pression
-                    simultanément</li>
-                <li> lache les, et regarde si la presse tombe au bon endroit</li>
-                <li> Enfin, si la presse tombe au bon endroit, appuie sur le bouton de sécurité et le bouton de coupe
-                    pour couper</li>
+                <li>Ouvre la <b>sécurité plexiglass</b>, dépose ton papier sur le plateau contre la <b>butée
+                        arrière</b>, puis referme-la.</li>
+                <li><b class="instruction-gras">Règle la taille :</b> Tape directement la dimension souhaitée sur le
+                    pavé numérique (ex: 21.00 pour du A4).</li>
+                <li><b class="instruction-gras">Valide :</b> Appuie sur la touche <span class="btn btn-green">START
+                        (Vert)</span>. La butée arrière va se déplacer toute seule à la bonne mesure.</li>
+                <li><b class="instruction-gras">Ajustement fin :</b> Si besoin, utilise la <b>grosse molette noire</b>
+                    sous le plateau pour peaufiner au millimètre près.</li>
+                <li>Pour <b class="instruction-gras">descendre la presse</b>, appuie sur le <b
+                        class="instruction-gras">bouton de sécurité</b> et le <b class="instruction-gras">bouton de
+                        pression</b> simultanément.</li>
+                <li>Lâche-les, et regarde si la presse tombe au bon endroit.</li>
+                <li>Enfin, si la presse tombe au bon endroit, appuie sur le <b class="instruction-gras">bouton de
+                        sécurité</b> et le <b class="instruction-gras">bouton de coupe</b> pour couper.</li>
             </ul>
         </div>
 
@@ -245,19 +298,27 @@
                     <div class="legend-dot" style="top: 55%; left: 85%;"><span class="legend-tooltip">Bouton STOP
                             (Rouge) - Urgence</span>5</div>
                 </div>
-                <p><i>La coupe unique (Survolez les points rouges)</i></p>
+                <div class="legend-list">
+                    <div class="legend-item"><span class="legend-num">1</span> <b>Bouton START (Vert)</b></div>
+                    <div class="legend-item"><span class="legend-num">2</span> <b>Mode Programme (P)</b></div>
+                    <div class="legend-item"><span class="legend-num">3</span> <b>Mémoriser l'étape</b></div>
+                    <div class="legend-item"><span class="legend-num">4</span> <b>Effacer (CP)</b></div>
+                    <div class="legend-item"><span class="legend-num">5</span> <b>Bouton STOP (Rouge)</b></div>
+                </div>
             </div>
             <p>Si tu as plusieurs coupes à la chaîne, utilise la mémoire :</p>
             <ul>
-                <li><b>Mode Programme :</b> Appuie sur la touche <span class="btn btn-grey">P</span>.</li>
-                <li><b>Choisir le n° :</b> Utilise les <b>flèches (▲/▼)</b> : le premier numéro est le <b>nom du
-                        programme</b>, le second est l'<b>étape</b> dans ce programme.</li>
-                <li><b>Saisir une étape :</b> Tape ta <b>mesure</b> au clavier.</li>
-                <li><b>Mémoriser :</b> Pour enregistrer l'étape, appuie sur la touche située <b>juste en dessous du
-                        P</b>.</li>
-                <li><b>Étape suivante :</b> Recommence l'opération pour chaque coupe de ta série.</li>
-                <li><b>Effacer :</b> Si tu te plantes, utilise <span class="btn btn-grey">CP</span> pour vider le
-                    programme.</li>
+                <li><b class="instruction-gras">Mode Programme :</b> Appuie sur la touche <span
+                        class="btn btn-grey">P</span>.</li>
+                <li><b class="instruction-gras">Choisir le n° :</b> Utilise les <b>flèches (▲/▼)</b> : le premier numéro
+                    est le <b>nom du programme</b>, le second est l'<b>étape</b>.</li>
+                <li><b class="instruction-gras">Saisir une étape :</b> Tape ta <b>mesure</b> au clavier.</li>
+                <li><b class="instruction-gras">Mémoriser :</b> Pour enregistrer l'étape, appuie sur la touche située
+                    <b>juste en dessous du P</b>.</li>
+                <li><b class="instruction-gras">Étape suivante :</b> Recommence l'opération pour chaque coupe de ta
+                    série.</li>
+                <li><b class="instruction-gras">Effacer :</b> Si tu te plantes, utilise <span
+                        class="btn btn-grey">CP</span> pour vider le programme.</li>
             </ul>
         </div>
 
